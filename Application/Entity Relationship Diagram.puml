@@ -1,0 +1,28 @@
+@startuml
+entity User {
+  * userId: String
+  --
+  * name: String
+  * threadId: StringSet
+}
+entity Messages {
+  * messageId: String
+  ..
+  * timeStamp: String
+  --
+  * threadId: String
+  * sender: String
+  * message: String
+}
+entity Threads {
+  * threadId: String
+  ..
+  * threadTitle: String
+  --
+  * userId: StringSet
+  * messageId: StringSet
+}
+
+User "1  " --{ "0..*" Messages
+User "1" --{ "0..*  " Threads
+@enduml

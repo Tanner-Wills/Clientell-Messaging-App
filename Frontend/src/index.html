@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="landingPage.js"></script>
+    <title>ClienTell Home</title>
+</head>
+<body class="background">
+<header class="header" id="header">
+    <a id="headerTitle">ClienTell</a>
+    <div id="userSearchControl">
+        <form>
+            <input type="text" id="userSearchField" placeholder="UserID or new User Name">
+            <button type="button" class="barButton" id="userSearchButton">Search</button>
+            <button type="button" class="barButton" id="newUser">New User</button>
+            <button type="button" class="barButton" id="userDeleteButton">Delete</button>
+        </form>
+    </div>
+</header>
+<div id="grid">
+    <div class="card" id="grid-threadCreateForm">
+        <form>
+            <h2>New Thread Form</h2>
+            <input type="text" id="createThreadNameField" placeholder="Thread Name"><br>
+            <input type="text" id="createThreadUserOne" placeholder="First UserID"><br>
+            <input type="text" id="createThreadUserTwo" placeholder="Second UserID"><br>
+            <button type="button" class="barButton" id="newThread">Submit</button>
+        </form>
+    </div>
+    <div class="card" id="grid-threadSearch">
+        <div id="threadSearchControl">
+            <form>
+                <h2>Thread Search</h2>
+                <input type="text" id="threadInputField" placeholder="Enter a ThreadId"><br>
+                <button type="button" class="barButton" id="threadSearchButton">Search</button>
+                <button type="button" class="barButton" id="threadDeleteButton">Delete</button>
+            </form>
+        </div>
+    </div>
+    <div class="card" id="grid-threadDisplay">
+        <div id="newMessageArea">
+            <h2>Send New Message:</h2>
+            <form>
+                <input type="text" id="newMessageUserId" placeholder="UserID"><br>
+                <input type="text" id="newMessageThreadId" placeholder="ThreadID"><br>
+                <input type="text" id="newMessageContent" placeholder="Enter your message here"><br>
+                <button type="button" class="barButton" id="newMessageSendButton">Send</button>
+            </form>
+        </div>
+        <div id="threadFeedArea">
+            <h2>Message Display</h2>
+            <p id="get-thread-message"></p>
+        </div>
+    </div>
+    <div class="card" id="grid-getAllUsersBox">
+        <h2>Users:</h2>
+        <div id="UserDisplayBox">
+        <p id="get-all-users-info"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
